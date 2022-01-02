@@ -2,9 +2,9 @@ package lesson2;
 
 public class MethodApp {
 
-    public static final String TEMPLATE = "int = %d string = %s\n";
+    public static final String TEMPLATE = "int = %d string = %s\n"; // \n - это перенос строки // final - нельзя будет поменять
 
-    public static void main(String[] args) {
+    public static void main(String[] args) { //точка входа в программу // запуск джава приложения
 
         int v1 = multiplication(4, 10);
         int v2 = multiplication(5, 6.0);

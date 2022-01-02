@@ -2,14 +2,16 @@ package lesson2;
 
 public class PrintUtil {
 
+    //JavaDoc:
     /**
      * Форматирует строку тремя * до и после
      *
      * @param str строка для форматирования
      */
     public static void printFormatted(String str) {
-        System.out.printf("***%s***", str);
-        System.out.println();
+        //System.out.println("***" + str + "***");
+        System.out.printf("***%s***", str); //это print formatted
+        System.out.println();               //все тот же print formatted
     }
 
     /**
