@@ -2,9 +2,9 @@ package lesson2;
 
 public class HomeWorkApp2 {
     public static void main(String[] args) {
-        acceptValidMethod();
+        acceptValidMethod(3,13);
         transferPosOrNegNumb();
-        returnTrueNegOrFalsePos();
+        returnTrueNegOrFalsePos(9);
         outputStringOnNumb("Wow", 4);
     }
 
@@ -13,15 +13,15 @@ public class HomeWorkApp2 {
     что их сумма лежит в пределах от 10 до 20 (включительно),
     если да – вернуть true, в противном случае – false.
     */
-    public static void acceptValidMethod() {
-        int a = 3;
-        int b = 13;
+    public static boolean acceptValidMethod(int a, int b) {
         int sum = a + b;
 
         if (sum >= 10 | sum <= 20) {
-            System.out.println("true");
+            //System.out.println("true");
+            return true;
         } else {
-            System.out.println("false");
+            //System.out.println("false");
+            return false;
         }
     }
 
@@ -44,17 +44,19 @@ public class HomeWorkApp2 {
     Написать метод, которому в качестве параметра передается целое число.
     Метод должен вернуть true, если число отрицательное, и вернуть false если положительное.
      */
-    public static void returnTrueNegOrFalsePos() {
-        int a = 9;
+    public static boolean returnTrueNegOrFalsePos(int a) {
+        //int a = 9;
         //int a = 0;
         //int a = 10;
 
         if (a % 2 != 0) {
-            System.out.println("true");
+            return true;
+            //System.out.println("true");
         } else if (a == 0) {
             System.out.println("Please, enter another number");
         } else {
-            System.out.println("false");
+            return false;
+            //System.out.println("false");
         }
     }
 
