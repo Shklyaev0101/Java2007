@@ -1,4 +1,4 @@
-package course1_lesson1;
+package lesson1;
 
 public class HomeWorkApp {
 
