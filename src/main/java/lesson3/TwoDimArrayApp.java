@@ -2,25 +2,25 @@ package lesson3;
 
 import java.util.Arrays;
 
-public class TwoDimArrayApp {
+public class TwoDimArrayApp {   //двумерный массив - много объектов памяти объединенных вместе
 
     public static void main(String[] args) {
-        int[][] array = new int[5][5];
+        int[][] array = new int[5][5];  // объявление двумерного массива
 
-        array[2][2] = 100;
-        for (int i = 0; i < array.length; i++) {
-            for (int j = 0; j < array[i].length; j++) {
-                System.out.print(array[i][j] + " ");
-            }
-            System.out.println();
+        array[2][2] = 100;  //заполнение элементом - 100 значение 2 и 2
+        for (int i = 0; i < array.length; i++) {            //  вложенный цикл выводит двумерный массив и авт. заполн - 0
+            for (int j = 0; j < array[i].length; j++) {     //
+                System.out.print(array[i][j] + " ");        //
+            }                                               //
+            System.out.println();                           //
         }
 
-        for (int i = 0; i < array.length; i++) {
-            System.out.println(Arrays.toString(array[i])); // []
+        for (int i = 0; i < array.length; i++) {            // альтернативная запись нашего массива, делают одну и ту же работу
+            System.out.println(Arrays.toString(array[i])); // [] тут одномерный массив
         }
 
 
-        System.out.println(Arrays.toString(array)); //[][]
+        System.out.println(Arrays.toString(array)); //[][] ,т.к сюда передаем двумерный массив
 
 
         int[] subArray = array[2];
@@ -30,7 +30,7 @@ public class TwoDimArrayApp {
         System.out.println();
         System.out.println();
 
-        int[][] newArray = new int[5][];
+        int[][] newArray = new int[5][];    //при объявлении массива не указываем сколько выделять памяти для подмассивов
 
         newArray[0] = new int[]{1, 2, 3};
         newArray[1] = new int[]{1, 2, 3, 4, 5};
