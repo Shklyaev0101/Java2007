@@ -9,13 +9,13 @@ public class HomeWorkApp3 {
     Например: [ 1, 1, 0, 0, 1, 0, 1, 1, 0, 0 ]. С помощью цикла и условия заменить 0 на 1, 1 на 0;
      */
         int[] intArray = {1, 1, 0, 0, 1, 0, 1, 1, 0, 0};
-            for (int i = 0; i < intArray.length; i++) {
-                if (intArray[i] == 0) {
-                    intArray[i] = 1;
-                } else {
-                    intArray[i] = 0;
-                }
+        for (int i = 0; i < intArray.length; i++) {
+            if (intArray[i] == 0) {
+                intArray[i] = 1;
+            } else {
+                intArray[i] = 0;
             }
+        }
         System.out.println(Arrays.toString(intArray));
 
     /*
@@ -34,17 +34,13 @@ public class HomeWorkApp3 {
     /*
     3. Задать массив [ 1, 5, 3, 2, 11, 4, 5, 2, 4, 8, 9, 1 ] пройти по нему циклом, и числа меньшие 6 умножить на 2;
      */
-
-
-    }
-
-
-
-
-
-
-
-
+        int[] multIntArray = {1, 5, 3, 2, 11, 4, 5, 2, 4, 8, 9, 1};
+        for (int i = 0; i < multIntArray.length; i++) {
+            if (multIntArray[i] < 6) {
+                multIntArray[i] = multIntArray[i] * 2;
+            }
+        }
+        System.out.println(Arrays.toString(multIntArray));
 
     /*
     4. Создать квадратный двумерный целочисленный массив (количество строк и столбцов одинаковое),
@@ -54,10 +50,26 @@ public class HomeWorkApp3 {
     то есть [0][0], [1][1], [2][2], …, [n][n];
      */
 
+        int[][] sqTdArray = new int[6][6];
+
+        for (int i = 0; i < sqTdArray.length; i++) {
+            for (int j = 0; j < sqTdArray[i].length; j++) {
+                if (sqTdArray[i] == sqTdArray[j]) {
+                    sqTdArray[i][j] = 1;
+                } else {
+                    sqTdArray[i][j] = 0;
+                }
+                System.out.print(sqTdArray[i][j] + " ");
+            }
+            System.out.println();
+        }
+
     /*
     5. Написать метод, принимающий на вход два аргумента: len и initialValue,
     и возвращающий одномерный массив типа int длиной len, каждая ячейка которого равна initialValue;
      */
+
+
 
     /*
     6. * Задать одномерный массив и найти в нем минимальный и максимальный элементы ;
@@ -81,5 +93,7 @@ public class HomeWorkApp3 {
     Примеры: [ 1, 2, 3 ] при n = 1 (на один вправо) -> [ 3, 1, 2 ]; [ 3, 5, 6, 1]
     при n = -2 (на два влево) -> [ 6, 1, 3, 5 ]. При каком n в какую сторону сдвиг можете выбирать сами.
      */
+    }
+
 
 }

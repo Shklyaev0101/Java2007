@@ -16,13 +16,9 @@ public class HomeWorkApp2 {
     public static boolean acceptValidMethod(int a, int b) {
         int sum = a + b;
 
-        if (sum >= 10 | sum <= 20) {
-            //System.out.println("true");
-            return true;
-        } else {
-            //System.out.println("false");
-            return false;
-        }
+        //System.out.println("true");
+        //System.out.println("false");
+        return sum >= 10 | sum <= 20;
     }
 
     /*

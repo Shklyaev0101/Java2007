@@ -24,7 +24,7 @@ public class LogicApp {
         // НЕ   !
 
         int a = 0;
-        if (isPositive(a) && !isZero(a) || !isPositive(a)) {    //чтоб выполнить обе проверки оставляем один - &
+        if (!isPositive(a) || !isZero(a)) {    //чтоб выполнить обе проверки оставляем один - &
             System.out.println("Положительно и не 0");
         }
 
