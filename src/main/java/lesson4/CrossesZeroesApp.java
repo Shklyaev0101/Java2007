@@ -10,7 +10,7 @@ public class CrossesZeroesApp {
     public static char[][] map;
 
     //Размер поля
-    public static final int SIZE = 3;
+    public static final int SIZE = 3;   // final - значение менять не дает
 
     //Точек для победы
     public static final int DOTS_TO_WIN = 3;
@@ -26,10 +26,10 @@ public class CrossesZeroesApp {
     public static final Random RANDOM = new Random();
 
     /**
-     * Проинициализироваать поле.
+     * Проинициализировать поле.
      */
     public static void initMap() {
-        map = new char[SIZE][SIZE];
+        map = new char[SIZE][SIZE]; //инициализируется поле 3*3 new - выделяет память
         for (int i = 0; i < map.length; i++) {
             for (int j = 0; j < map[i].length; j++) {
                 map[i][j] = DOT_EMPTY;
@@ -68,7 +68,7 @@ public class CrossesZeroesApp {
             x = SCANNER.nextInt() - 1;
             y = SCANNER.nextInt() - 1;
         } while (!isCellValid(x, y));
-        map[y][x] = DOT_X;
+        map[y][x] = DOT_X;  // присвоение точки
     }
 
     /**
@@ -77,11 +77,11 @@ public class CrossesZeroesApp {
     public static void aiTurn() {
         int x, y;
         do {
-            x = RANDOM.nextInt(SIZE);
+            x = RANDOM.nextInt(SIZE);   // псевдорандомное значение
             y = RANDOM.nextInt(SIZE);
         } while (!isCellValid(x, y));
         System.out.println("Робот делает ход в " + (x + 1) + " " + (y + 1));
-        map[y][x] = DOT_O;
+        map[y][x] = DOT_O;  // присвоение точки
     }
 
     /**
@@ -145,7 +145,7 @@ public class CrossesZeroesApp {
     public static boolean isMapFull() {
         for (int i = 0; i < map.length; i++) {
             for (int j = 0; j < map[i].length; j++) {
-                if (map[i][j] == DOT_EMPTY) {
+                if (map[i][j] == DOT_EMPTY) {   //если хоть одна пустая точка, возвращаем обратно
                     return false;
                 }
             }
@@ -157,21 +157,21 @@ public class CrossesZeroesApp {
         initMap();
         printMap();
         while (true) {
-            humanTurn();
-            printMap();
-            if (checkWin(DOT_X)) {
+            humanTurn();    // первым ходит человек
+            printMap();     // печатаем мапу
+            if (checkWin(DOT_X)) {  //если человек ходит Х , то пишем, что побеждает человек
                 System.out.println("Побеждает человек");
-                break;
+                break;  // если человек выйграл, то разрываем цикл
             }
-            if (isMapFull()) {
+            if (isMapFull()) {  //если мапа вся заполнена, но свободных ячеек не осталось
                 System.out.println("Ничья!");
                 break;
             }
-            aiTurn();
-            printMap();
-            if (checkWin(DOT_O)) {
+            aiTurn();   // вторым ходит робот
+            printMap(); // печатаем мапу
+            if (checkWin(DOT_O)) {  // если робот ходит О, то пишем, что побеждает робот
                 System.out.println("Робот выиграл");
-                break;
+                break;  // если робот выиграл, то разрываем цикл
             }
             if (isMapFull()) {
                 System.out.println("Ничья!");
