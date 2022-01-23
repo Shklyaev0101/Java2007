@@ -21,5 +21,9 @@ public class homeWork5 {
         employee[3].info();
         employee[4].info();
 
+        for (int i = 0; i < employee.length; i++)
+            if (employee[i].age > 40)
+                employee[i].info();
+
     }
 }
