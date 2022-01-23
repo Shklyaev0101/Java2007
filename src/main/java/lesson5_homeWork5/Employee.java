@@ -9,7 +9,7 @@ public class Employee {
     public int age;
     public int salary;
 
-
+    //  Конструктор
     public Employee(String name, String post, String email, long telNumber, int age, int salary) {
         this.name = name;
         this.post = post;
@@ -18,7 +18,7 @@ public class Employee {
         this.age = age;
         this.salary = salary;
     }
-
+    //  Обозначаем что именно нужно выводить в консоль
     public void info() {
         System.out.println("name = " + this.name + "," + " post = " + this.post + "," + " email = " + this.email + "," + " telNumber = " + this.telNumber + "," + " age = " + this.age + "," + " salary = " + this.salary + ";");
     }
