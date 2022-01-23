@@ -20,7 +20,7 @@ public class Employee {
     }
 
     public void info() {
-        System.out.println("name = " + this.name + "," + " post = " + this.post + "," + " email = " + this.email + "," + " telNumber = " + this.telNumber + "," + " age = " + this.age + "," + " salary = " + this.age + ";");
+        System.out.println("name = " + this.name + "," + " post = " + this.post + "," + " email = " + this.email + "," + " telNumber = " + this.telNumber + "," + " age = " + this.age + "," + " salary = " + this.salary + ";");
     }
 
 }
